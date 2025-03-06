@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <h1>Array Methods</h1>
+
+    <p>1. foreach-traverse  the array</p>
+    <p>2. map</p>
+    <p>3. filter</p>
+    <p>4. reduce</p>
+    <p>5. sort</p>
+    <p>6. splice(start,delete,inserrt)</p>
+    <p>7. each</p>
+    <p>8. some</p>
+
+    <script>
+        const array1 =[1, 2, 3, 4, 5, 6];
+
+        // //1 .foreach : traverse each element of array and perform specified operation on same array
+        //     array1.forEach((curEle, index, array) => {
+        //         console.log(curEle * curEle, "index is :",index , "array is : ",array);
+        //     })
+
+            
+
+        //     //real time use 
+        //     const users =[
+        //         {firstname :"Suchithra1", age:23, address:"Hassan"},
+        //         {firstname :"Suchithra2", age:23, address:"Hassan"},
+        //         {firstname :"Suchithra3", age:23, address:"Hassan"}
+        //      ]
+        //      users.forEach((curEle) =>{
+        //         console.log(curEle.firstname);
+        //         // console.log(curEle.address);
+        //      }) 
+
+        // //2. map : simmilar to foreach but it map  the result to new array
+        //     array2 = [2, 4, 6, 8, 10, 12, 14];
+        //     const array3 = array1.map((curEle,index,array) =>{
+        //         // console.log(curEle * curEle);
+        //         return curEle*curEle;
+        //     })
+        //     console.log("array2: ", array2);
+        //     console.log("array3: ", array3);
+
+
+        //     //real time use 
+        //     const user =[
+        //         {firstname :"Suchithra1", age:23, address:"Hassan"},
+        //         {firstname :"Suchithra2", age:23, address:"Hassan"},
+        //         {firstname :"Suchithra3", age:23, address:"Hassan"}
+        //     ]
+
+        //     const user1 = user.map((ele) =>{
+        //         return ele;
+        //     })
+
+
+        //3.filter: filters the array based on some conditions
+            const array4 =[1,2,3,4,5,6,7,8,9,10];
+            array5 = array4.filter((curele) =>{// here we filtering the value baesd on condition of is given numnber is even or not
+                return curele % 2 == 1;
+            })
+            console.log("array5: ",array5);
+
+            //real time use 
+            const User =[
+                {firstname :"Suchithra1", age:23, address:"Hassan"},
+                {firstname :"Suchithra2", age:23, address:"Hassan"},
+                {firstname :"Suchithra3", age:23, address:"Hassan"}
+            ]
+
+             const User1 = User.filter((curele) =>{
+               return curele.firstname;
+             })
+
+             console.log("User1: ",User1);
+
+
+        //4. reduce :  it used to whole array elements into single values by perforing some operatins on it
+            //  working:it has three keywords(previous, current, return)
+            // previous | current | return
+            //    1     |    2    |    3
+            //    3     |    3    |    6
+            //    6     |    4    |    10
+            //    10    |    5    |    15
+            const array6 = [1, 2 ,3 ,4 ,5];
+             const res = array6.reduce((previous, current) =>{
+                return previous + current;
+             })//if we not provide previous value
+             console.log("result: ",res);
+    </script>
+</body>
+</html>

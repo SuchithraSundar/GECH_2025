@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects table</title>
+    <style>
+        table,
+        td,
+        th{
+            border:1px solid black;
+            border-collapse: collapse;
+            padding: 10px 30px;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tables using Objects</h1>
+    <table>
+        <thead>
+            <th>Firstname</th>
+            <th>Age</th>
+            <th>Address</th>
+        </thead>
+        <tbody id="table_body">
+            
+        </tbody>
+     </table>
+
+    <!-- <script>
+        const obj1 ={
+            Firstname : "Suchithra",
+            Age : 23,
+            Address : "Hassan",  
+        }
+
+        const obj2 ={
+            Firstname : "Sharmila",
+            Age : 25,
+            Address : "Nagara",  
+        }
+
+        const obj3 ={
+            Firstname : "Anitha",
+            Age : 27,
+            Address : "Mysuru",  
+        }
+
+        const obj4 ={
+            Firstname : "Iraa",
+            Age : 22,
+            Address : "Mandya",  
+        }
+        const obj5 ={
+            Firstname : "Mady",
+            Age : 23,
+            Address : "Banglore",  
+        }
+
+        const obj6 ={
+            Firstname : "Manu",
+            Age : 22,
+            Address : "Nanjangud",  
+        }
+
+        const obj7 ={
+            Firstname : "Rishon",
+            Age : 10,
+            Address : "Mangalore",  
+        }
+
+        const obj8 ={
+            Firstname : "Vivek",
+            Age : 28,
+            Address : "Udupi",  
+        }
+
+        const obj9 ={
+            Firstname : "Edwin",
+            Age : 26,
+            Address : "Tumkur",  
+        }
+
+        const obj10 ={
+            Firstname : "SAngel",
+            Age : 24,
+            Address : "Dharvada",  
+        }
+
+    </script> -->
+
+    <script>
+        const users =[
+            {firstname :"Suchithra1", age:23, address:"Hassan"},
+            {firstname :"Suchithra2", age:23, address:"Hassan"},
+            {firstname :"Suchithra3", age:23, address:"Hassan"},
+            {firstname :"Suchithra4", age:23, address:"Hassan"},
+            {firstname :"Suchithra5", age:23, address:"Hassan"},
+            {firstname :"Suchithra6", age:23, address:"Hassan"},
+            {firstname :"Suchithra7", age:23, address:"Hassan"},
+        ]
+        /* const contet =" ";
+        for (let item of users){
+            console.log(item);
+            console.log(item.firstname);
+        } */
+         let content =" ";
+         for(let item of users){
+            content += `<tr>
+                <td> ${item.firstname}</td>
+                <td> ${item.age}</td>
+                <td> ${item.address}</td>
+            </tr>`
+         }
+         console.log(content);
+         document.getElementById('table_body').innerHTML = content;
+    </script>
+
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Object in Table</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Object Data in Table</h2>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <script>
+        // Initializing an array of objects
+        const people = [
+            { name: "Alice", age: 25, city: "New York" },
+            { name: "Bob", age: 30, city: "Los Angeles" },
+            { name: "Charlie", age: 28, city: "Chicago" }
+        ];
+
+        // Selecting the table body element
+        const tableBody = document.getElementById("tableBody");
+
+        // Function to display objects as a table
+        function displayTable(data) {
+            data.forEach(person => {
+                const row = `<tr>
+                                <td>${person.name}</td>
+                                <td>${person.age}</td>
+                                <td>${person.city}</td>
+                             </tr>`;
+                tableBody.innerHTML += row;
+            });
+        }
+
+        // Call the function to display the data
+        displayTable(people);
+    </script>
+
+</body>
+</html> -->
